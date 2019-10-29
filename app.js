@@ -10,11 +10,17 @@ table.addEventListener("click", e => {
 
 function getTotal(target) {
   if (!target.classList.contains("equals")) {
+    output.textContent = "";
     strNum += target.textContent;
     output.textContent = strNum;
   } else {
     checkTarget(strNum);
-    output.textContent = eval(res).toFixed(2);
+    let total = eval(res);
+    if (total % 1 !== 0) {
+      output.textContent = total.toFixed(2);
+    } else {
+      output.textContent = total.toFixed(0);
+    }
     strNum = eval(res).toFixed(2);
   }
 }
