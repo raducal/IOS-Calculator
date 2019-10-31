@@ -14,14 +14,21 @@ function getTotal(target) {
     strNum += target.textContent;
     output.textContent = strNum;
   } else {
-    checkTarget(strNum);
-    let total = eval(res);
-    if (total % 1 !== 0) {
-      output.textContent = total.toFixed(2);
-    } else {
-      output.textContent = total.toFixed(0);
+    let total;
+    try {
+      checkTarget(strNum);
+      total = eval(res);
+      if (total % 1 !== 0) {
+        output.textContent = total.toFixed(2);
+      } else {
+        output.textContent = total.toFixed(0);
+      }
+    } catch (error) {
+      console.log(error);
+      total = "";
+      strNum = "";
+      output.textContent = "";
     }
-    strNum = eval(res).toFixed(2);
   }
 }
 
