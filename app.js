@@ -23,6 +23,7 @@ function getTotal(target) {
       } else {
         output.textContent = total.toFixed(0);
       }
+      strNum = total;
     } catch (error) {
       console.log(error);
       total = "";
