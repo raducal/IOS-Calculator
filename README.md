@@ -1,7 +1,5 @@
 # IOS-Calculator
 
-# [Live Demo](http://raducostica.com/IOS-Calculator/)
-
 ## 1. Introduction
 
 Simple calculator using HTML5, CSS3 & vanilla Javascript. My inspiration for the UI was the IOS calculator.
